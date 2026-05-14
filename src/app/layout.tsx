@@ -2,38 +2,26 @@ import type { Metadata } from 'next'
 import './globals.css'
 import Header from './../components/header'
 import Footer from './../components/footer'
-import CookieConsent from './../components/cookie-consent'
-import GoogleTagManager, { GoogleTagManagerNoScript } from './../components/google-tag-manager'
-import {
-  openSans,
-  lato,
-  raleway,
-  faustina,
-  cantataOne,
-  faunaOne,
-  montserrat,
-  cinzel,
-} from '@/lib/fonts'
+import { lato, faustina } from '@/lib/fonts'
 
 // Get basePath for GitHub Pages deployment
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH || ''
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://ffcworkingsite1.org'),
+  metadataBase: new URL('https://savewatersaveplanet.org'),
   title: {
-    default: 'Free For Charity | Reduce Costs, Increase Impact',
-    template: '%s | Free For Charity',
+    default: 'Saving Water Saves the Planet',
+    template: '%s | Saving Water Saves the Planet',
   },
   description:
-    'Free For Charity connects students, professionals, and businesses with nonprofits to reduce costs and increase revenues—putting more resources back into their missions.',
+    'A Girl Scout Gold Award project: DIY deep-watering pipes that help homeowners save up to 50% of irrigation water while keeping trees healthier.',
   keywords: [
-    'nonprofit',
-    'charity',
-    'volunteer',
-    'donate',
-    'free hosting',
-    'domains',
-    'Microsoft 365',
+    'water conservation',
+    'Girl Scout Gold Award',
+    'deep watering pipe',
+    'DIY irrigation',
+    'tree watering',
+    'environmental nonprofit',
   ],
   robots: {
     index: true,
@@ -51,27 +39,25 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: 'website',
-    url: 'https://ffcworkingsite1.org/',
-    siteName: 'Free For Charity',
-    title: 'Free For Charity | Reduce Costs, Increase Impact',
+    url: 'https://savewatersaveplanet.org/',
+    siteName: 'Saving Water Saves the Planet',
+    title: 'Saving Water Saves the Planet',
     description:
-      'Connecting students, professionals, and businesses with nonprofits to reduce costs and increase revenues.',
+      'DIY deep-watering pipes that help homeowners save up to 50% of irrigation water -- a Girl Scout Gold Award project.',
     images: [
       {
-        url: '/web-app-manifest-512x512.png',
-        width: 512,
-        height: 512,
-        alt: 'Free For Charity',
+        url: '/Images/savewatersaveplanet/logo.png',
+        width: 800,
+        height: 600,
+        alt: 'Saving Water Saves the Planet logo',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    site: '@freeforcharity',
-    title: 'Free For Charity | Reduce Costs, Increase Impact',
-    description:
-      'Connecting students, professionals, and businesses with nonprofits to reduce costs and increase revenues.',
-    images: ['/web-app-manifest-512x512.png'],
+    title: 'Saving Water Saves the Planet',
+    description: 'DIY deep-watering pipes that help homeowners save up to 50% of irrigation water.',
+    images: ['/Images/savewatersaveplanet/logo.png'],
   },
   icons: {
     icon: [
@@ -82,6 +68,7 @@ export const metadata: Metadata = {
   },
   manifest: `${basePath}/site.webmanifest`,
 }
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -89,49 +76,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        {/* Preconnect to external domains for faster resource loading */}
-        <link rel="preconnect" href="https://www.googletagmanager.com" />
-        <link rel="preconnect" href="https://ffcsites.org" />
-        <link rel="preconnect" href="https://www.zeffy.com" />
-        <link rel="preconnect" href="https://widgets.guidestar.org" />
-        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-        <link rel="dns-prefetch" href="https://ffcsites.org" />
-        <link rel="dns-prefetch" href="https://www.zeffy.com" />
-        <link rel="dns-prefetch" href="https://www.idealist.org" />
-
-        {/* Preload critical LCP image */}
-        <link
-          rel="preload"
-          as="image"
-          href={`${basePath}/Images/figma-hero-img.webp`}
-          fetchPriority="high"
-        />
-
-        <GoogleTagManager />
-      </head>
       <body
-        className={[
-          'antialiased',
-          openSans.variable,
-          lato.variable,
-          raleway.variable,
-          faustina.variable,
-          cantataOne.variable,
-          faunaOne.variable,
-          montserrat.variable,
-          cinzel.variable,
-        ].join(' ')}
+        className={['antialiased', lato.variable, faustina.variable].join(' ')}
         suppressHydrationWarning={true}
       >
-        <GoogleTagManagerNoScript />
-        {/* <PopupProvider> */}
         <Header />
-        {children}
+        <main id="main-content">{children}</main>
         <Footer />
-        <CookieConsent />
-        {/* <PopupsRootClient /> */}
-        {/* </PopupProvider> */}
       </body>
     </html>
   )
