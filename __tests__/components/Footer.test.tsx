@@ -3,34 +3,33 @@ import { render, screen } from '@testing-library/react'
 import { axe, toHaveNoViolations } from 'jest-axe'
 import Footer from '../../src/components/footer'
 
-// Extend Jest matchers
 expect.extend(toHaveNoViolations)
 
 describe('Footer component', () => {
   it('should render the footer', () => {
     render(<Footer />)
-    const footer = screen.getByRole('contentinfo')
-    expect(footer).toBeInTheDocument()
+    expect(screen.getByRole('contentinfo')).toBeInTheDocument()
   })
 
-  it('should display Endorsements section', () => {
+  it('should display the project title heading', () => {
     render(<Footer />)
-    expect(screen.getByText('Endorsements')).toBeInTheDocument()
+    expect(
+      screen.getByRole('heading', { name: /Saving Water Saves the Planet/i })
+    ).toBeInTheDocument()
   })
 
-  it('should display Quick Links section', () => {
+  it('should display the Explore links section', () => {
     render(<Footer />)
-    expect(screen.getByText('Quick Links')).toBeInTheDocument()
+    expect(screen.getByText('Explore')).toBeInTheDocument()
   })
 
-  it('should display Contact Us section with contact information', () => {
+  it('should display the Get in Touch section', () => {
     render(<Footer />)
-    expect(screen.getByText('Contact Us')).toBeInTheDocument()
+    expect(screen.getByText('Get in Touch')).toBeInTheDocument()
   })
 
   it('should have social media links', () => {
     render(<Footer />)
-    // Check for social media links by their aria-labels or visible text
     const links = screen.getAllByRole('link')
     expect(links.length).toBeGreaterThan(0)
   })
@@ -41,15 +40,8 @@ describe('Footer component', () => {
     expect(screen.getByText(new RegExp(currentYear.toString()))).toBeInTheDocument()
   })
 
-  it('should have GuideStar profile link', () => {
+  it('should have an email contact link', () => {
     render(<Footer />)
-    const guidestarLink = screen.getByText(/GuideStar Profile/i)
-    expect(guidestarLink).toBeInTheDocument()
-  })
-
-  it('should have email contact link', () => {
-    render(<Footer />)
-    // Look for email link
     const links = screen.getAllByRole('link')
     const emailLink = links.find((link) => link.getAttribute('href')?.includes('mailto:'))
     expect(emailLink).toBeDefined()
