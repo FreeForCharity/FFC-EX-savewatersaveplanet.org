@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import './globals.css'
 import Header from './../components/header'
 import Footer from './../components/footer'
@@ -66,6 +66,12 @@ export const metadata: Metadata = {
   manifest: `${basePath}/site.webmanifest`,
 }
 
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  themeColor: '#0e7490',
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -77,6 +83,12 @@ export default function RootLayout({
         className={['antialiased', lato.variable, faustina.variable].join(' ')}
         suppressHydrationWarning={true}
       >
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:rounded focus:bg-white focus:px-4 focus:py-2 focus:text-black focus:shadow-lg"
+        >
+          Skip to main content
+        </a>
         <Header />
         <main id="main-content">{children}</main>
         <Footer />
