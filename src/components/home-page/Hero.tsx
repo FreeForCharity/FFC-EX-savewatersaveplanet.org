@@ -45,7 +45,7 @@ const Hero: React.FC = () => {
         <div className="relative">
           <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-xl border-4 border-white bg-[color:var(--sw-paper-alt)]">
             <img
-              src={assetPath('/Images/savewatersaveplanet/gallery-1.png')}
+              src={assetPath('/Images/savewatersaveplanet/gallery-1.webp')}
               alt="A deep-watering pipe installed at the base of a tree."
               className="w-full h-full object-cover"
             />
