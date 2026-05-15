@@ -9,7 +9,7 @@ export default function TermsOfService() {
   return (
     <article className="pt-24 md:pt-28 pb-16">
       <header className="sw-wave-bg py-12 md:py-16">
-        <div className="sw-container max-w-3xl">
+        <div className="mx-auto px-4 max-w-3xl">
           <h1 className="text-4xl md:text-5xl font-bold text-[color:var(--sw-primary-dark)] mb-3">
             Terms of Service
           </h1>
@@ -18,7 +18,7 @@ export default function TermsOfService() {
           </p>
         </div>
       </header>
-      <div className="sw-container max-w-3xl mt-10 sw-prose">
+      <div className="mx-auto px-4 max-w-3xl mt-10 sw-prose">
         <h2>About this site</h2>
         <p>
           Saving Water Saves the Planet is an educational nonprofit project. The instructions,

@@ -15,7 +15,7 @@ const ContactPage = () => {
   return (
     <article className="pt-24 md:pt-28 pb-16">
       <header className="sw-wave-bg py-12 md:py-16">
-        <div className="sw-container max-w-3xl">
+        <div className="mx-auto px-4 max-w-3xl">
           <h1 className="text-4xl md:text-5xl font-bold text-[color:var(--sw-primary-dark)] mb-4">
             Contact Us
           </h1>
@@ -25,7 +25,7 @@ const ContactPage = () => {
         </div>
       </header>
 
-      <div className="sw-container max-w-3xl mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div className="mx-auto px-4 max-w-3xl mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="bg-white rounded-2xl shadow-md p-6 border border-[color:var(--sw-primary)]/10">
           <Mail className="w-8 h-8 text-[color:var(--sw-primary)] mb-3" />
           <h2 className="text-xl font-bold text-[color:var(--sw-primary-dark)] mb-2">
@@ -62,7 +62,7 @@ const ContactPage = () => {
         </div>
       </div>
 
-      <div className="sw-container max-w-3xl mt-8 text-center text-sm text-[color:var(--sw-muted)]">
+      <div className="mx-auto px-4 max-w-3xl mt-8 text-center text-sm text-[color:var(--sw-muted)]">
         <p>
           A short contact form is on the way. In the meantime, email is the best way to reach us --
           we usually reply within a few days.

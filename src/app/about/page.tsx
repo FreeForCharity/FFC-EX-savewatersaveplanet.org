@@ -14,7 +14,7 @@ const AboutPage = () => {
   return (
     <article className="pt-24 md:pt-28 pb-16">
       <header className="sw-wave-bg py-12 md:py-16">
-        <div className="sw-container max-w-3xl">
+        <div className="mx-auto px-4 max-w-3xl">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[color:var(--sw-primary)]/10 text-[color:var(--sw-primary-dark)] text-xs font-semibold uppercase tracking-wider mb-4">
             <Leaf className="w-4 h-4" />
             Our Story
@@ -29,7 +29,7 @@ const AboutPage = () => {
         </div>
       </header>
 
-      <div className="sw-container max-w-3xl mt-10 sw-prose">
+      <div className="mx-auto px-4 max-w-3xl mt-10 sw-prose">
         <p>
           Hi -- I&apos;m Elina, a Girl Scout senior, and this nonprofit project is my Gold Award.
           The Gold Award is the highest honor a Girl Scout can earn, and it asks you to solve a
