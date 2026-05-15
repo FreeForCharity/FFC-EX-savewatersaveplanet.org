@@ -3,36 +3,36 @@ import { assetPath } from '@/lib/assetPath'
 
 const galleryImages = [
   {
-    src: '/Images/savewatersaveplanet/gallery-1.png',
+    src: '/Images/savewatersaveplanet/gallery-1.webp',
     alt: 'Deep-watering pipe installed in soil.',
   },
   {
-    src: '/Images/savewatersaveplanet/gallery-2.png',
+    src: '/Images/savewatersaveplanet/gallery-2.webp',
     alt: 'Close-up of the finished pipe assembly.',
   },
   {
-    src: '/Images/savewatersaveplanet/gallery-3.png',
+    src: '/Images/savewatersaveplanet/gallery-3.webp',
     alt: 'Tree being watered through a deep-watering pipe.',
   },
   {
-    src: '/Images/savewatersaveplanet/gallery-4.png',
+    src: '/Images/savewatersaveplanet/gallery-4.webp',
     alt: 'Pipe with drilled holes prepared for installation.',
   },
   {
-    src: '/Images/savewatersaveplanet/gallery-5.png',
+    src: '/Images/savewatersaveplanet/gallery-5.webp',
     alt: 'Wrapped pipe with weed-protection fabric.',
   },
   {
-    src: '/Images/savewatersaveplanet/gallery-6.png',
+    src: '/Images/savewatersaveplanet/gallery-6.webp',
     alt: 'Pipe installed at the base of a young tree.',
   },
   {
-    src: '/Images/savewatersaveplanet/gallery-7.png',
+    src: '/Images/savewatersaveplanet/gallery-7.webp',
     alt: 'Pipe lid with removable top in place.',
   },
-  { src: '/Images/savewatersaveplanet/gallery-8.png', alt: 'Pipe ready for the next watering.' },
+  { src: '/Images/savewatersaveplanet/gallery-8.webp', alt: 'Pipe ready for the next watering.' },
   {
-    src: '/Images/savewatersaveplanet/gallery-9.png',
+    src: '/Images/savewatersaveplanet/gallery-9.webp',
     alt: 'Finished installation viewed from above.',
   },
 ]

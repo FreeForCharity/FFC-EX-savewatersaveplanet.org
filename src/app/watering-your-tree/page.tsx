@@ -103,7 +103,7 @@ const WateringPage = () => {
 
         <div className="my-8 rounded-xl overflow-hidden shadow-md">
           <img
-            src={assetPath('/Images/savewatersaveplanet/gallery-3.png')}
+            src={assetPath('/Images/savewatersaveplanet/gallery-3.webp')}
             alt="A tree being watered using the deep-watering pipe."
             className="w-full h-auto"
           />

@@ -54,7 +54,7 @@ const HowToPreview: React.FC = () => {
           >
             <div className="aspect-video overflow-hidden bg-[color:var(--sw-paper-alt)]">
               <img
-                src={assetPath('/Images/savewatersaveplanet/gallery-3.png')}
+                src={assetPath('/Images/savewatersaveplanet/gallery-3.webp')}
                 alt="A tree being watered with a deep-watering pipe in place."
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform"
               />
