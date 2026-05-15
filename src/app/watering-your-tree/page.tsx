@@ -14,7 +14,7 @@ const WateringPage = () => {
   return (
     <article className="pt-24 md:pt-28 pb-16">
       <header className="sw-wave-bg py-12 md:py-16">
-        <div className="sw-container max-w-3xl">
+        <div className="mx-auto px-4 max-w-3xl">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[color:var(--sw-leaf)]/10 text-[color:var(--sw-primary-dark)] text-xs font-semibold uppercase tracking-wider mb-4">
             <Sprout className="w-4 h-4" />
             Use Your Pipe Well
@@ -29,7 +29,7 @@ const WateringPage = () => {
         </div>
       </header>
 
-      <div className="sw-container max-w-3xl mt-10 sw-prose">
+      <div className="mx-auto px-4 max-w-3xl mt-10 sw-prose">
         <h2>The simple rule</h2>
         <p>
           A good baseline is{' '}
