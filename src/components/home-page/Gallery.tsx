@@ -53,13 +53,16 @@ const Gallery: React.FC = () => {
           {galleryImages.map((img) => (
             <div
               key={img.src}
-              className="aspect-square overflow-hidden rounded-xl shadow-sm hover:shadow-md transition-shadow bg-[color:var(--sw-paper-alt)]"
+              className="aspect-square overflow-hidden rounded-xl shadow-sm hover:shadow-md transition-shadow sw-gallery-cell"
             >
               <img
                 src={assetPath(img.src)}
                 alt={img.alt}
                 loading="lazy"
-                className="w-full h-full object-cover hover:scale-105 transition-transform"
+                width={400}
+                height={400}
+                decoding="async"
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
               />
             </div>
           ))}
