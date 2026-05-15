@@ -96,6 +96,8 @@ const Footer: React.FC = () => {
           &copy; {currentYear} Saving Water Saves the Planet. A project of{' '}
           <Link
             href="https://freeforcharity.org"
+            target="_blank"
+            rel="noopener noreferrer"
             className="underline hover:text-[color:var(--sw-sand)]"
           >
             Free For Charity
