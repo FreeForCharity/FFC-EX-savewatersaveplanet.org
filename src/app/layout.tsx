@@ -60,11 +60,8 @@ export const metadata: Metadata = {
     images: ['/Images/savewatersaveplanet/logo.png'],
   },
   icons: {
-    icon: [
-      { url: `${basePath}/favicon.ico`, sizes: '32x32' },
-      { url: `${basePath}/icon.png`, type: 'image/png', sizes: '32x32' },
-    ],
-    apple: [{ url: `${basePath}/apple-icon.png`, sizes: '180x180', type: 'image/png' }],
+    icon: [{ url: `${basePath}/icon.svg`, type: 'image/svg+xml' }],
+    apple: [{ url: `${basePath}/apple-icon.svg`, type: 'image/svg+xml' }],
   },
   manifest: `${basePath}/site.webmanifest`,
 }
