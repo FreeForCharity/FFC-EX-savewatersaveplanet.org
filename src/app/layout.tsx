@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next'
 import './globals.css'
 import Header from './../components/header'
 import Footer from './../components/footer'
+import GoogleTagManager, { GoogleTagManagerNoScript } from './../components/google-tag-manager'
 import { lato, faustina } from '@/lib/fonts'
 
 // Get basePath for GitHub Pages deployment
@@ -79,10 +80,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <GoogleTagManager />
+      </head>
       <body
         className={['antialiased', lato.variable, faustina.variable].join(' ')}
         suppressHydrationWarning={true}
       >
+        <GoogleTagManagerNoScript />
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-50 focus:rounded focus:bg-white focus:px-4 focus:py-2 focus:text-black focus:shadow-lg"
